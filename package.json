@@ -1,0 +1,39 @@
+{
+  "name": "visual-studio-nomnoml",
+  "displayName": "nomnoml",
+  "description": "A tool for rendering UML diagrams based on the nomnoml library.",
+  "version": "0.0.1",
+  "publisher": "doctorrustynelson",
+  "engines": {
+    "vscode": "^1.0.0"
+  },
+  "categories": [
+    "Other"
+  ],
+  "activationEvents": [
+    "onCommand:extension.nomnoml"
+  ],
+  "main": "./out/src/extension",
+  "contributes": {
+    "languages": [{
+      "id": "nomnoml",
+      "extensions": [ ".nomnoml" ] 
+    }],
+    "commands": [{
+      "command": "extension.nomnoml",
+      "title": "View: nomnoml"
+    }]
+  },
+  "scripts": {
+    "vscode:prepublish": "node ./node_modules/vscode/bin/compile",
+    "compile": "node ./node_modules/vscode/bin/compile -watch -p ./",
+    "postinstall": "node ./node_modules/vscode/bin/install"
+  },
+  "dependencies": {
+    "nomnoml": "0.0.4"
+  },
+  "devDependencies": {
+    "typescript": "^1.8.5",
+    "vscode": "^0.11.0"
+  }
+}
