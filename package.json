@@ -1,5 +1,5 @@
 {
-  "name": "visual-studio-nomnoml",
+  "name": "vscode-nomnoml",
   "displayName": "nomnoml",
   "description": "A tool for rendering UML diagrams based on the nomnoml library.",
   "version": "0.0.1",

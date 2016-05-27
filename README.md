@@ -1,13 +1,14 @@
-# README
-## This is the README for your extension "mannequin"
-You can author your README using Visual Studio Code.  Here are some useful editor keyboard shortcuts:
+# vscode-nomnoml
+> A tool for rendering UML diagrams based on the nomnoml library.
 
-* Split the editor (`Cmd+\` on OSX or `Ctrl+\` on Windows and Linux)
-* Toggle preview (`Shift+CMD+V` on OSX or `Shift+Ctrl+V` on Windows and Linux)
-* Press `Ctrl+Space` (Windows, Linux) or `Cmd+Space` (OSX) to see a list of Markdown snippets
+## Usage
 
-### For more information
-* [Visual Studio Code's Markdown Support](http://code.visualstudio.com/docs/languages/markdown)
-* [Markdown Syntax Reference](https://help.github.com/articles/markdown-basics/)
+Open a `.nomnoml` file filled with nomnoml syntax.  To open the previewer open the command window and run the below command.  The previewer will update as you edit the file.
 
-**Enjoy!**
+```
+> View: nomnoml
+```
+
+## Additional Resources
+
+[nomnoml home page](http://www.nomnoml.com/)
