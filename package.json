@@ -4,14 +4,24 @@
   "description": "A tool for rendering UML diagrams based on the nomnoml library.",
   "version": "0.1.0",
   "publisher": "doctorrustynelson",
+  "license": "MIT",
   "repository": { 
     "type": "git", 
     "url": "https://github.com/doctorrustynelson/vscode-nomnoml.git"
   },
+  "bugs": {
+    "url": "https://github.com/doctorrustynelson/vscode-nomnoml/issues"
+  },
+  
   "engines": {
     "vscode": "^1.0.0"
   },
-  "categories": [
+  "keywords": [ 
+    "nomnoml", 
+    "uml",
+    "diagrams"
+  ],
+  "categories": [ 
     "Other"
   ],
   "activationEvents": [
