@@ -17,22 +17,32 @@ export function activate(context: vscode.ExtensionContext) {
             let editor = vscode.window.activeTextEditor;
             
             if (!(editor.document.languageId === 'nomnoml')) {
-                return this.errorSnippet( "Active editor doesn't show a nomnoml document." );
+                return this.errorSnippet( new Error( `Active editor doesn't show a nomnoml document (languageId is ${editor.document.languageId}).` ) );
             }
             
             let text = editor.document.getText();
-
+            
             return this.generateDiagram( text );
         }
         
-        private errorSnippet(error: string): string {
-            return `<body>${error}</body>`;
+        private errorSnippet(error: Error): string {
+            return `<html><body>
+                        <h1>Error: <span style="font-family: monospace;">${error.name}</span></h1>
+                        <hr>
+                        <h2>Message: <span style="font-family: monospace;">${error.message.replace( /\n/g, '<br>&nbsp&nbsp&nbsp&nbsp&nbsp' )}</span></h2>
+                    </body></html>`;
         }
         
         private generateDiagram( text: string ): string {
-            return `<html><body>
-                        ${nomnoml.renderSvg( text )}
-                    <body></html>`
+            let svg : string;
+            
+            try{
+                svg = nomnoml.renderSvg( text );
+            } catch( exception ){
+                return this.errorSnippet( exception );
+            }
+            
+            return `<html><body>${svg}<body></html>`
         }
         
         get onDidChange(): vscode.Event<vscode.Uri> {
