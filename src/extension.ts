@@ -52,8 +52,6 @@ export function activate(context: vscode.ExtensionContext) {
                     var boundingBox = svg.getBBox( );
                     var width = boundingBox.width + 20;
                     var height = boundingBox.height + 20;
-                    console.log( 'Width: ' + ( width + 'px' ) );
-                    console.log( 'Height: ' + ( height + 'px' ) );
                     svg.style.width = width + 'px';
                     svg.style.height = height + 'px';
                 </script>
