@@ -42,7 +42,22 @@ export function activate(context: vscode.ExtensionContext) {
                 return this.errorSnippet( exception );
             }
             
-            return `<html><body>${svg}<body></html>`
+            //return `<html><body>${svg}<body></html>`
+            return `<html><body style="margin: 0px; width: 100%; height: 100%; overflow:hidden;">
+                <div style="width: 100%; height: 100%; overflow: scroll;">
+                ${ svg }
+                </div> 
+                <script>
+                    var svg = document.getElementsByTagName( 'svg' )[ 0 ];
+                    var boundingBox = svg.getBBox( );
+                    var width = boundingBox.width + 20;
+                    var height = boundingBox.height + 20;
+                    console.log( 'Width: ' + ( width + 'px' ) );
+                    console.log( 'Height: ' + ( height + 'px' ) );
+                    svg.style.width = width + 'px';
+                    svg.style.height = height + 'px';
+                </script>
+            </body></html>`
         }
         
         get onDidChange(): vscode.Event<vscode.Uri> {

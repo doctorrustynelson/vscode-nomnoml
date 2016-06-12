@@ -16,6 +16,6 @@ pillage()|hi()|
 [<start>st]->[<state>plunder]
 [plunder]->[<choice>more loot]
 [more loot]->[st]
-[more loot] no ->[<end>e]
+[more loot] no ->[<end>]
 
 [<actor>Sailor] - [<usecase>shiver me;timbers]
