@@ -35,14 +35,17 @@ export function activate(context: vscode.ExtensionContext) {
         
         private generateDiagram( text: string ): string {
             let svg : string;
-            
-            try{
+            let backgroundColor : string = undefined;
+
+            try {
                 svg = nomnoml.renderSvg( text );
+                let result = /\#bgColor\:\s?(\S*)/.exec( text );
+                if( result && result[ 1 ] )
+                    backgroundColor = result[ 1 ];
             } catch( exception ){
                 return this.errorSnippet( exception );
             }
             
-            //return `<html><body>${svg}<body></html>`
             return `<html><body style="margin: 0px; width: 100%; height: 100%; overflow:hidden;">
                 <div style="width: 100%; height: 100%; overflow: scroll;">
                 ${ svg }
@@ -52,8 +55,9 @@ export function activate(context: vscode.ExtensionContext) {
                     var boundingBox = svg.getBBox( );
                     var width = boundingBox.width + 20;
                     var height = boundingBox.height + 20;
-                    svg.style.width = width + 'px';
-                    svg.style.height = height + 'px';
+                    svg.style['min-width'] = width + 'px';
+                    svg.style['min-height'] = height + 'px';
+                    ${ backgroundColor != undefined ? `svg.style['background-color'] = '${backgroundColor}';` : '//no background color specified.' }
                 </script>
             </body></html>`
         }

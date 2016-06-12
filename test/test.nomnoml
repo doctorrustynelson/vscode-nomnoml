@@ -1,3 +1,5 @@
+bgColor: blue
+
 [Pirate|eyeCount: Int|raid();
 pillage()|hi()|
   [beard]--[parrot]
