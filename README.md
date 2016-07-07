@@ -2,6 +2,7 @@
 > A tool for rendering UML diagrams based on the nomnoml library.
 
 [![](https://vsmarketplacebadge.apphb.com/version/doctorrustynelson.vscode-nomnoml.svg)](https://marketplace.visualstudio.com/items?itemName=doctorrustynelson.vscode-nomnoml)
+[![](https://vsmarketplacebadge.apphb.com/rating/doctorrustynelson.vscode-nomnoml.svg)](https://marketplace.visualstudio.com/items?itemName=doctorrustynelson.vscode-nomnoml)
 [![](https://vsmarketplacebadge.apphb.com/installs/doctorrustynelson.vscode-nomnoml.svg)](https://marketplace.visualstudio.com/items?itemName=doctorrustynelson.vscode-nomnoml)
 
 ## Usage
