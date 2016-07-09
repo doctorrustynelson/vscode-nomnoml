@@ -1,9 +1,10 @@
 # vscode-nomnoml
 > A tool for rendering UML diagrams based on the nomnoml library.
 
-[![](https://vsmarketplacebadge.apphb.com/version/doctorrustynelson.vscode-nomnoml.svg)](https://marketplace.visualstudio.com/items?itemName=doctorrustynelson.vscode-nomnoml)
-[![](https://vsmarketplacebadge.apphb.com/rating/doctorrustynelson.vscode-nomnoml.svg)](https://marketplace.visualstudio.com/items?itemName=doctorrustynelson.vscode-nomnoml)
-[![](https://vsmarketplacebadge.apphb.com/installs/doctorrustynelson.vscode-nomnoml.svg)](https://marketplace.visualstudio.com/items?itemName=doctorrustynelson.vscode-nomnoml)
+[![Version](https://vsmarketplacebadge.apphb.com/version/doctorrustynelson.vscode-nomnoml.svg)](https://marketplace.visualstudio.com/items?itemName=doctorrustynelson.vscode-nomnoml)
+[![Rating](https://vsmarketplacebadge.apphb.com/rating/doctorrustynelson.vscode-nomnoml.svg)](https://marketplace.visualstudio.com/items?itemName=doctorrustynelson.vscode-nomnoml)
+[![Installs](https://vsmarketplacebadge.apphb.com/installs/doctorrustynelson.vscode-nomnoml.svg)](https://marketplace.visualstudio.com/items?itemName=doctorrustynelson.vscode-nomnoml)
+[![Dependency Status](https://david-dm.org/doctorrustynelson/vscode-nomnoml.svg)](https://david-dm.org/doctorrustynelson/vscode-nomnoml)
 
 ## Usage
 
